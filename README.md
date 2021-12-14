@@ -1,4 +1,4 @@
-# REKA:BIT Extension for Microsoft MakeCode
+# REKA:BIT Extension for Microsoft MakeCode (modified to remove NeoPixel/ RGB) to make Bluetooth work
 
 This code provides the driver for [**REKA:BIT** - Simplifying robotics with micro:bit](https://www.cytron.io/p-rekabit-simplifying-robotics-with-microbit).
 
@@ -44,51 +44,7 @@ input.onButtonPressed(Button.AB, function () {
 })
 ```
 
-## RGB LEDs
 
-Clear all RGB pixels.
-
-```blocks
-rekabit.clearAllRgbPixels()
-```
-
-Change the RGB pixels brightness to maximum.
-
-```blocks
-rekabit.setRgbBrightness(255)
-```
-
-Show color green on all RGB pixels and change the color one by one to red.
-
-```blocks
-rekabit.setAllRgbPixelsColor(0x00ff00)
-basic.pause(1000)
-rekabit.setRgbPixelColor(0, 0xff0000)
-basic.pause(500)
-rekabit.setRgbPixelColor(1, 0xff0000)
-```
-
-## Test Your REKA:BIT
-REKA:BIT (with micro:bit) set is shipped with the default micro:bit out-of-the-box demo. If you wish to test the functionality of your REKA:BIT board, open and edit this [test program](https://makecode.microbit.org/_X6WCMYY2VWzK). Then upload it to your board.
->This test program contains Python code to manipulate the IO pins in a for-loop. You can view it in MakeCode Python mode. The code is compatible with micro:bit V1 & V2.
-- **On startup**:
-   - play _power up_ melody tune
-   - perform a sequential LED lights (P9 LED will light up constantly on micro:bit V1 - it's shared with LED matrix)
-- **Forever loop**:
-   - RGB (Neopixel) LEDs perform color changing
-- **Press micro:bit button A**:
-   - light up all blue LEDs
-   - run both DC motors in forward direction at 50% speed
-   - move all servo motors to 0 degree
-- **Press micro:bit button B**: 
-   - turn off all blue LEDs (P9 LED will light up constantly on micro:bit V1 - it's shared with LED matrix)
-   - run both DC motors in backward direction at 50% speed
-   - move all servo motors to 180 degree
-- **Press micro:bit button A + B**: 
-   - stop both DC Motor 1 & 2
-   - move all servo motors to 90 degree
-- **Turn micro:bit/REKA:BIT upside down**: 
-   - reset the board
 
 REKA:BIT also comes with four DC motor quick test buttons. You may press the onboard M1A, M1B, M2A or M2B push buttons to run your DC motors without writing any code. This is very convenient for checking the DC motor connections and functionality.
   
