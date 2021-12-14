@@ -13,9 +13,7 @@
         "main.blocks",
         "main.ts",
         "power.ts",
-        "motor.ts",
-        "rgb.ts",
-        "_locales/zh-CN/pxt-rekabit-strings.json"
+        "motor.ts"
     ],
     "testFiles": [
         "test.ts"

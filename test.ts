@@ -31,7 +31,7 @@ basic.forever(function () {
     }
 
 
-
+/*
     // Show red color on all RGB pixels.
     rekabit.setAllRgbPixelsColor(0xff0000)
     basic.pause(1000)
@@ -47,7 +47,7 @@ basic.forever(function () {
 
     // Clear all RGB pixels.
     rekabit.clearAllRgbPixels()
-
+*/
 
 
     // Run Motor 1 forward at 50% speed for 1 second.
